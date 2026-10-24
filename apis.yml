@@ -1,25 +1,79 @@
 aid: usul
+
 name: Usul
+
+image: https://framerusercontent.com/images/UvPrnUwICNZWXZjnZnaulxMOHU.png
+
 description: 'Usul is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
   backed by true-ventures) and added to the network as a stub for full-pipeline profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/usul/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-24'
+
 modified: '2026-10-24'
+
 tags:
-- Company
-apis: []
+- Government Contracts
+- AI Platform
+- Competitive Intelligence
+- Stakeholder Mapping
+- Budget Analysis
+- Supplier Management
+- Business Development
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- true-ventures
+
 common:
+- type: Vendors
+  url: vendors/usul-vendors.yml
+- type: WellKnown
+  url: well-known/usul-well-known.yml
+- type: Hosts
+  url: hosts/usul-hosts.yml
+- type: Newsroom
+  url: https://usul.com/news
+- type: Documentation
+  url: https://docs.usul.com/
+- type: DomainSecurity
+  url: security/usul-domain-security.yml
 - type: Website
   url: https://usul.com
+
+apis: []
+
+x-backed-by:
+- true-ventures
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-24'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://app.usul.com/api/mcp
+    status: 401
+  - url: https://usul.com
+    status: 200
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

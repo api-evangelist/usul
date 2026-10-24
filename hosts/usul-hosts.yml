@@ -1,0 +1,96 @@
+generated: '2026-10-24'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 7
+  own: 6
+  other_domain: 1
+  platform: 0
+  roles:
+  - api
+  - docs
+  - identity
+  - other
+  - portal
+  - website
+hosts:
+- host: accounts.google.com
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: google.com
+  role: identity
+  relation: other-domain
+- host: api.usul.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: usul.com
+  role: api
+  relation: own
+- host: app.usul.com
+  found_by:
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - docs
+  registrable_domain: usul.com
+  role: other
+  relation: own
+- host: developers.usul.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - well-known
+  types: []
+  serves: []
+  status: 200
+  registrable_domain: usul.com
+  role: portal
+  relation: own
+- host: docs.usul.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Documentation
+  serves: []
+  registrable_domain: usul.com
+  role: docs
+  relation: own
+- host: trust.usul.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: usul.com
+  role: other
+  relation: own
+- host: usul.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Newsroom
+  - Website
+  serves: []
+  registrable_domain: usul.com
+  role: website
+  relation: own
